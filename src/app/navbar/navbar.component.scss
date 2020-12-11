@@ -1,0 +1,57 @@
+ion-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 10px rgb(255, 153, 51) ridge;
+    background-image: url("../../assets/images/drawing.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    section {
+        
+        display: flex;
+        flex-direction: column;
+        margin-left: 1%;
+        width: 45%;
+
+        ion-title {
+            color: black;
+            background-color: rgba(255, 153, 51, 0.8);
+            font-weight: bolder;
+            font-size: 40px;
+            border-top-right-radius: 45px;
+            border: 15px;
+            margin-bottom: 60px;
+            margin-top: 10px;
+        } 
+
+        ion-navbar{
+            border-top: rgb(255, 153, 51) 10px solid;
+            border-radius: 90px;
+
+            ul {
+                display: flex;
+                padding-inline-start: 0;
+                justify-content: space-around;
+                background-color: black;
+                li {
+                    list-style-type: none;
+                    align-items: baseline;
+                }
+                a {
+                    text-decoration: none;
+                    color: rgb(255, 153, 51);
+                    font-size: 24px;
+                    padding: 5px;
+                    transition: 0.5s; 
+                }
+
+                a:hover {
+                    border-right: rgb(255, 153, 51) 3px solid;
+                    border-left: rgb(255, 153, 51) 3px solid;
+                    border-radius: 45px;
+                }
+            }
+        }  
+    }
+
+}

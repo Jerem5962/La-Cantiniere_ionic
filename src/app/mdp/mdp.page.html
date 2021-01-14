@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+  
+<ion-content [fullscreen]="true">
+  
+  <div id="text">
+    <ion-text color="black" > Nouveau mot de passe :</ion-text>
+  </div>
+
+  <div id="container">
+    <ion-item >
+      <ion-label color="dark">Mot de passe :</ion-label>
+      <ion-input id="input" [(ngModel)]="inputValue"  color="dark grey" type="password" placeholder="Mot de passe"></ion-input>
+    </ion-item>
+    <ion-button (click)="validation()" color="dark" expand="block" shape="round">OK</ion-button>
+  </div>
+
+  <div id="text2">
+    <ion-text color="black" > Celui-ci doit contenir des chiffres,des lettres et une majusucule.</ion-text>
+  </div>
+  <input [(ngModel)]="msg">
+</ion-content>

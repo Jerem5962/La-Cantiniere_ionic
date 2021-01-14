@@ -10,7 +10,23 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  
+  {
+    path: 'connexion',
+    loadChildren: () => import('./connexion/connexion.module').then( m => m.ConnexionPageModule)
   },
+  {
+    path: 'inscription',
+    loadChildren: () => import('./inscription/inscription.module').then( m => m.InscriptionPageModule)
+  },
+  {
+    path: 'mdp',
+    loadChildren: () => import('./mdp/mdp.module').then( m => m.MdpPageModule)
+  },  {
+    path: 'mail',
+    loadChildren: () => import('./mail/mail.module').then( m => m.MailPageModule)
+  },
+
 ];
 
 @NgModule({

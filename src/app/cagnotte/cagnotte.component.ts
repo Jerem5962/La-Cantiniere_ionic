@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {​​ Router }​​ from '@angular/router';
 
 @Component({
   selector: 'app-cagnotte',
@@ -7,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CagnotteComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private router: Router) {}
+  naviguate(id:string){
+    this.router.navigate(['/connexion']);
+  }
   ngOnInit() {}
 
 }

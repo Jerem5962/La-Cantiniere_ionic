@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<ion-content [fullscreen]="true">
+  
+  <div id="text">
+    <ion-text color="black"> Entrez votre email pour réinitialiser votre mot de passe :</ion-text>
+  </div>
+  <div id="container">
+    <ion-item >
+      <ion-label color="dark">Email :</ion-label>
+      <ion-input color="dark grey" type="mail" placeholder="Adresse email"></ion-input>
+    </ion-item>
+
+    <ion-button color="dark" expand="block" shape="round">OK</ion-button>
+    <ion-item>
+      <ion-label  color="dark">Numéro dans le mail:</ion-label>
+      <ion-input color="dark grey" type="numero" placeholder="Numéro"></ion-input>
+    </ion-item>
+    <ion-button (click)="naviguate()"color="dark" expand="block" shape="round">OK</ion-button>
+  </div>
+
+</ion-content>

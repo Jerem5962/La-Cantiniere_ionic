@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-item >
+      <ion-label color="dark">Email :</ion-label>
+      <ion-input color="dark grey" type="mail" placeholder="Adresse email"></ion-input>
+    </ion-item>
+    
+    <ion-item >
+      <ion-label  color="dark">Mot de passe :</ion-label>
+      <ion-input id="input" [(ngModel)]="inputValue" color="dark grey" type="password" placeholder="Mot de passe"></ion-input>
+    </ion-item>
+  </div>
+<ion-text>Le mot de passe doit contenir une majuscule,des chiffres et des lettres.</ion-text>
+  <div class="inscription">
+    <ion-button (click)="validation()" color="dark" expand="block" shape="round">S'inscrire</ion-button>
+  </div>
+  <input [(ngModel)]="msg">
+</ion-content>

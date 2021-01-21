@@ -23,34 +23,41 @@
   text-decoration: none;
 }
 
+#imgDivPresentation{
+width: auto;
+//max-width: 400px;
+height: 30vh;
+margin: 10px 0;
+border-radius: 90px;
+}
+
 .divPresentationMenu {
   display: flex;
-  margin: 10px 10px;
+  width: 75%;
+  justify-content: space-around;
+  margin: 100px auto;
   border: 1px #FF9933 solid;
 
-  #imgDivPresentation{
-  width: 50%;
-  //max-width: 400px;
-  height: 30vh;
-  margin: 20px 20px;
-  border-radius: 90px;
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+    width: auto;
+
+    #imgDivPresentation{
+        width: 75%;
+        margin: 10px auto;
+      }
   }
 
   #divcontentMenu {
     text-align: center;
     align-self: center;
-    margin: auto;
+    margin: 10px 10px;
 
     h3 {
       border-left: rgb(255, 153, 51) 3px solid;
       border-bottom: rgb(255, 153, 51) 1px solid;
       border-radius: 160px;
       width: auto;
-    }
-
-    img {
-      height: 50px;
-      width: 75%;
     }
 
     li {
@@ -69,6 +76,7 @@
 
 #sectionMenuDeLaSemaine h2 {
   text-align: center;
+  margin-top: 100px;
 }
 
 .divTableauMenuDeSemaine {

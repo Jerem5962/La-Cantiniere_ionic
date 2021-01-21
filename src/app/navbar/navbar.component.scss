@@ -30,12 +30,14 @@ ion-header {
       margin-top: 10px;
     } 
 
-    ion-navbar{
+    ion-nav{
       @media (max-width: 500px){
           display: none;
       }
       border-top: rgb(255, 153, 51) 10px solid;
-      border-radius: 90px;
+      border-radius: 90px; 
+      height: 60px;
+      position: relative;
 
       ul {
         display: flex;

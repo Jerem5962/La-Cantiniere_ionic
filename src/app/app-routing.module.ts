@@ -22,9 +22,14 @@ const routes: Routes = [
   {
     path: 'mdp',
     loadChildren: () => import('./mdp/mdp.module').then( m => m.MdpPageModule)
-  },  {
+  },
+  {
     path: 'mail',
     loadChildren: () => import('./mail/mail.module').then( m => m.MailPageModule)
+  },  
+  {
+    path: 'cagnotte',
+    loadChildren: () => import('./cagnotte/cagnotte.module').then( m => m.CagnottePageModule)
   },
 
 ];

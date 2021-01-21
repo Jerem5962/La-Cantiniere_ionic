@@ -5,17 +5,17 @@
   <div id="main">
     <section id="sectionMenuDuJour">
       <div class="divPresentationMenu">
-        <img id="imgDivPresentation" src="assets/images/saute-de-poulet-aux-carottes-gingembre-coriandre-sauce-soja-et-riz.jpg" alt="curry de poulet au riz basmati">
+        <img id="imgDivPresentation" src="{{ meals[1].image }}" alt="">
         <div id="divcontentMenu">
           <img src="assets/images/menus-du-jour.jpg" alt="">
-          <h3>Sauté de  poulet aux carottes</h3>
+          <h3>{{ meals[1].title }}</h3>
           <ul>
-            <li>Escalopes de poulet</li>
+            <li>{{ meals[1].description }}</li>
             <li>Riz Basmati</li>
             <li>Sauce soja</li>
           </ul>
           <div class="tarif">
-            <p>5.90 €</p>
+            <p>{{ meals[1].price }} €</p>
             <a href="">Commander</a>
           </div>
         </div>

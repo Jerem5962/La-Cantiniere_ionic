@@ -4,8 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { CagnotteComponent } from '../cagnotte/cagnotte.component';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { IonicModule } from '@ionic/angular';
-
 import { InscriptionPageRoutingModule } from './inscription-routing.module';
+
 
 import { InscriptionPage } from './inscription.page';
 
@@ -16,7 +16,8 @@ import { InscriptionPage } from './inscription.page';
     IonicModule,
     InscriptionPageRoutingModule
   ],
-  declarations: [InscriptionPage, NavbarComponent, CagnotteComponent],
-  exports: [NavbarComponent]
+  declarations: [InscriptionPage, NavbarComponent, CagnotteComponent,],
+  exports: [NavbarComponent,]
 })
 export class InscriptionPageModule {}
+

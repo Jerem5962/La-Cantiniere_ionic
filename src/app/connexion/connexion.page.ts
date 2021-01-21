@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {​​ Router }​​ from '@angular/router';
+import { CantServiceService } from '../cant-service.service';
+import { JwtHelperService } from "@auth0/angular-jwt";
 
 @Component({
   selector: 'app-connexion',
@@ -7,8 +9,10 @@ import {​​ Router }​​ from '@angular/router';
   styleUrls: ['connexion.page.scss'],
 })
 export class ConnexionPage {
-
-  constructor(private router: Router) {}
+  helper: JwtHelperService = new JwtHelperService()
+  decodedToken;
+  constructor(private router: Router,
+    private CantServiceService: CantServiceService) {}
 
   naviguate1(id:string){
     this.router.navigate(['/inscription']);
@@ -17,5 +21,13 @@ export class ConnexionPage {
     this.router.navigate(['/mail']);
   }
 
+  login() {
+    let token:string;
+    this.CantServiceService.login().subscribe(
+      (res) => {
+        token=res.headers.get("Authorization")
+        this.decodedToken = this.helper.decodeToken(token);
+        console.log(this.decodedToken);
+      });
 }
-
+}

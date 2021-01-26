@@ -26,12 +26,11 @@ const routes: Routes = [
   {
     path: 'mail',
     loadChildren: () => import('./mail/mail.module').then( m => m.MailPageModule)
-  },  
-  {
-    path: 'cagnotte',
-    loadChildren: () => import('./cagnotte/cagnotte.module').then( m => m.CagnottePageModule)
   },
-
+  {
+    path: 'meal',
+    loadChildren: () => import('./meal/meal.module').then( m => m.MealPageModule)
+  },
 ];
 
 @NgModule({

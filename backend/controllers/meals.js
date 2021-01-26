@@ -2,7 +2,9 @@ const Meal = require('../models/meal');
 
 exports.showAllMeals = (req, res) => {
     Meal.find()
-        .then((meals) => { res.status(200).json(meals)})
+        .then((meals) => {
+            res.status(200).json(meals)
+        })
         .catch(error => res.status(400).json(error))
 }
 
@@ -11,9 +13,9 @@ exports.createMeal = (req, res) => {
         ...req.body
     })
     console.log(req.body)
-    meal.save()
-        .then(() => res.status(201).json({ message: 'Objet enregistré !', meal: meal}))
-        .catch(error => res.status(400).json({ error }));
+     meal.save()
+         .then(() => res.status(201).json({ message: 'Objet enregistré !', meal: meal}))
+         .catch(error => res.status(400).json({ error }));
 }
 
 exports.showSimpleMeal = (req, res, next) => {

@@ -1,0 +1,31 @@
+
+<app-navbar></app-navbar>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{meal.strMeal}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-img [src]="meal.strMealThumb"></ion-img>
+      <h2>Ingredients:</h2>
+      <ion-item *ngFor="let ingredient of meal.strIngredients">
+        <ion-label>{{ ingredient }}</ion-label>
+      </ion-item>
+      <h2>Prix:</h2>
+      <ion-text>
+        <h3>{{ meal.price }} €</h3>
+      </ion-text>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="div_bottom">
+    <ion-button shape="round" color="secondary">J'achéte !</ion-button>
+    <ion-button shape="round" color="warning">Retour</ion-button>
+  </div>
+
+
+
+
+</ion-content>

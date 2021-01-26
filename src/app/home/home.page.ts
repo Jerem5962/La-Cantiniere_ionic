@@ -10,7 +10,6 @@ import { Meal } from '../../../backend/models/meal'
 })
 export class HomePage {
   
-  meal: Meal 
   meals: Meal = [] 
   constructor(private http: HttpClient) {
     this.readAPI('http://localhost:3000/meals')

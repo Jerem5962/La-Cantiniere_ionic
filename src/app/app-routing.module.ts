@@ -31,6 +31,7 @@ const routes: Routes = [
     path: 'meal',
     loadChildren: () => import('./meal/meal.module').then( m => m.MealPageModule)
   },
+
 ];
 
 @NgModule({

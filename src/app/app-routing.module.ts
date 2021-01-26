@@ -22,11 +22,15 @@ const routes: Routes = [
   {
     path: 'mdp',
     loadChildren: () => import('./mdp/mdp.module').then( m => m.MdpPageModule)
-  },  {
+  },
+  {
     path: 'mail',
     loadChildren: () => import('./mail/mail.module').then( m => m.MailPageModule)
   },
-
+  {
+    path: 'meal',
+    loadChildren: () => import('./meal/meal.module').then( m => m.MealPageModule)
+  },
 ];
 
 @NgModule({

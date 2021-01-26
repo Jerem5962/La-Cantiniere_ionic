@@ -5,18 +5,17 @@
   <div id="main">
     <section id="sectionMenuDuJour">
       <div class="divPresentationMenu">
-        <img id="imgDivPresentation" src="assets/images/saute-de-poulet-aux-carottes-gingembre-coriandre-sauce-soja-et-riz.jpg" alt="curry de poulet au riz basmati">
+        <img id="imgDivPresentation" src="{{ meals[4].strMealThumb }}" alt="">
         <div id="divcontentMenu">
           <img src="assets/images/menus-du-jour.jpg" alt="">
-          <h3>Sauté de  poulet aux carottes</h3>
+          <h3>{{ meals[4].strMeal }}</h3>
           <ul>
-            <li>Escalopes de poulet</li>
-            <li>Riz Basmati</li>
-            <li>Sauce soja</li>
+            <li *ngFor="let ingredient of meals[4].strIngredients">{{ ingredient }}</li>
           </ul>
           <div class="tarif">
-            <p>5.90 €</p>
-            <a href="">Commander</a>
+            <p>{{ meals[4].price }} €</p>
+            <a href="">Commander</a><br>
+            <a href="/meal/{{meals[4]._id}}">Voir</a>
           </div>
         </div>
       </div>

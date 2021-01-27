@@ -1,0 +1,13 @@
+
+ion-menu {
+    background-image: url("../assets/images/drawing.jpg");   
+    ion-header{
+        ion-toolbar {
+            ion-title {
+                background-color: rgba(255, 153, 51);
+                color: black;
+                padding: 20px; 
+            }
+        }
+    }
+}

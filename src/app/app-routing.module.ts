@@ -31,12 +31,17 @@ const routes: Routes = [
     path: 'meal',
     loadChildren: () => import('./meal/meal.module').then( m => m.MealPageModule)
   },
+  {
+    path: 'contact',
+    loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
+  },
 
 ];
 
+
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules, relativeLinkResolution: 'legacy' })
   ],
   exports: [RouterModule]
 })

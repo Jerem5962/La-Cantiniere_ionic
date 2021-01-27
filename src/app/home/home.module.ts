@@ -18,6 +18,6 @@ import { NavbarComponent } from '../navbar/navbar.component';
     HomePageRoutingModule
   ],
   declarations: [HomePage, NavbarComponent, CagnotteComponent],
-  exports: [NavbarComponent]
+  //exports: [NavbarComponent]
 })
 export class HomePageModule {}

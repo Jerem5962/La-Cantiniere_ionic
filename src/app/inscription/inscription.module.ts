@@ -17,7 +17,7 @@ import { InscriptionPage } from './inscription.page';
     InscriptionPageRoutingModule
   ],
   declarations: [InscriptionPage, NavbarComponent, CagnotteComponent,],
-  exports: [NavbarComponent,]
+  //exports: [NavbarComponent,]
 })
 export class InscriptionPageModule {}
 

@@ -4,8 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { ConnexionPageRoutingModule } from './connexion-routing.module';
 import { ConnexionPage } from './connexion.page';
-import { CagnotteComponent } from '../cagnotte/cagnotte.component';
-import { NavbarComponent } from '../navbar/navbar.component';
 
 @NgModule({
   imports: [
@@ -14,7 +12,7 @@ import { NavbarComponent } from '../navbar/navbar.component';
     IonicModule,
     ConnexionPageRoutingModule
   ],
-  declarations: [ConnexionPage, NavbarComponent, CagnotteComponent],
-  exports: [NavbarComponent]
+  declarations: [ConnexionPage],
+  //exports: [NavbarComponent]
 })
 export class ConnexionPageModule {}

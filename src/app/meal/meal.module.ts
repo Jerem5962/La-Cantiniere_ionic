@@ -5,8 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { MealPageRoutingModule } from './meal-routing.module';
-import { CagnotteComponent } from '../cagnotte/cagnotte.component';
-import { NavbarComponent } from '../navbar/navbar.component';
 
 import { MealPage } from './meal.page';
 
@@ -17,6 +15,6 @@ import { MealPage } from './meal.page';
     IonicModule,
     MealPageRoutingModule,
   ],
-  declarations: [MealPage, CagnotteComponent, NavbarComponent],
+  declarations: [MealPage],
 })
 export class MealPageModule {}

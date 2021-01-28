@@ -25,4 +25,9 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
+
+  openMenu() {
+    this.menu.enable(true, "first")
+    this.menu.open('first')
+  }
 }

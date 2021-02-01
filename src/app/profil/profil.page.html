@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Profil Utilisateur</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #formulaire="ngForm" (ngSubmit)="onSubmitTemplate">
+    <div>
+      <ion-item>
+        <ion-label position="floating">Nom</ion-label>
+        <ion-input type='text'
+                    name='nom'
+                    [(ngModel)]='user.nom'></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Prénom</ion-label>
+        <ion-input type='text'
+                  name='prenom'
+                   [(ngModel)]='user.prenom'></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Statut</ion-label>
+        <ion-input type='text'
+                    name='statut'
+                    [(ngModel)]='user.statut'></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Téléphone</ion-label>
+        <ion-input type='tel'
+                    name='tel'
+                    [(ngModel)]='user.tel'></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type='mail'
+                    name='mail'
+                    [(ngModel)]='user.mail'
+                    required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Adresse</ion-label>
+        <ion-input type='text'
+                    name='rue'
+                    [(ngModel)]='user.rue'></ion-input>
+
+        <ion-input type='text'
+                    name='ville'
+                    [(ngModel)]='user.ville'></ion-input>
+
+        <ion-input type='zip'
+                    name='CP'
+                    [(ngModel)]='user.CP'></ion-input>
+      </ion-item>
+    </div>
+    <section>
+      <ion-button type="submit" expand="block"
+                  [disabled] = 'formulaire incomplet'>Enregistrer</ion-button>
+    </section>
+  </form>
+</ion-content>
